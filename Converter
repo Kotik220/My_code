@@ -1,0 +1,135 @@
+package ok;
+
+import java.util.Scanner;
+
+public class IAmGood {		
+	private static double VISAprod;
+	private static double VISApok;
+	private static double PrivatBankProd;
+	private static double PrivatBankPok;
+	private static Scanner sc;
+	private static int dol;
+	private static int bank1;
+	private static int fun;
+
+	public static void main(String[] args) {
+		setVISAprod(26.8855);
+		setVISApok(26.8442);
+		setPrivatBankProd(26.882);
+	    setPrivatBankPok(26.600);
+	sc = new Scanner(System.in);
+		System.out.println("Выберите банк: VISA (1) или PrivatBank (2)");
+		int bank = sc.nextInt();
+		System.out.println("Курс доллара, банк " + bank);
+		{
+		if (bank == 1) {
+		    System.out.println("Вы выбрали банк VISA");
+		    System.out.println("Выберите функцию: ПРОДАЖА (1) или ПОКУПКА (2)");
+		    setFun(sc.nextInt());
+		    {
+		    	if (fun == 1) {
+					System.out.println("Введите значение (доллар)");
+					setDol(sc.nextInt());
+					System.out.println(dol*26.8855);
+				}	
+		    	{
+		    		if (fun == 2) {
+						System.out.println("Введите значение (доллар)");
+						setDol(sc.nextInt());
+						System.out.println(dol*26.8442);
+		    		}
+		    		else {
+		    			System.out.println("Попробуйте выбрать еще раз");
+		    			setBank1(sc.nextInt());
+		    		}
+		    	}
+		    }
+		}
+		else if (bank == 2) {
+			System.out.println("Вы выбрали банк PrivatBank");
+			System.out.println("Выберите функцию: ПРОДАЖА (1) или ПОКУПКА (2)");
+			int fun = sc.nextInt();
+			{
+				if (fun == 1) {
+					System.out.println("Введите значение (доллар)");
+					setDol(sc.nextInt());
+					System.out.println(dol*26.882);
+				}
+				if (fun == 2) {
+					System.out.println("Введите значение (доллар)");
+					setDol(sc.nextInt());
+					System.out.println(dol*26.600);
+				}
+				else {
+					System.out.println("Попробуйте выбрать еще раз");
+					setBank1(sc.nextInt());
+				}
+			}
+		}
+		else {
+			System.out.println("Попробуйте выбрать еще раз");
+			setBank1(sc.nextInt());
+		}
+		
+		System.out.println("Введите значение (доллар)");
+		setDol(sc.nextInt());
+		
+	}
+}
+
+	public static double getPrivatBankPok() {
+		return PrivatBankPok;
+	}
+
+	public static void setPrivatBankPok(double privatBankPok) {
+		PrivatBankPok = privatBankPok;
+	}
+
+	public static double getPrivatBankProd() {
+		return PrivatBankProd;
+	}
+
+	public static void setPrivatBankProd(double privatBankProd) {
+		PrivatBankProd = privatBankProd;
+	}
+
+	public static double getVISApok() {
+		return VISApok;
+	}
+
+	public static void setVISApok(double vISApok) {
+		VISApok = vISApok;
+	}
+
+	public static double getVISAprod() {
+		return VISAprod;
+	}
+
+	public static void setVISAprod(double vISAprod) {
+		VISAprod = vISAprod;
+	}
+
+	public static int getDol() {
+		return dol;
+	}
+
+	public static void setDol(int dol) {
+		IAmGood.dol = dol;
+	}
+
+	public static int getBank1() {
+		return bank1;
+	}
+
+	public static void setBank1(int bank1) {
+		IAmGood.bank1 = bank1;
+	}
+
+	public static int getFun() {
+		return fun;
+	}
+
+	public static void setFun(int fun) {
+		IAmGood.fun = fun;
+	}
+	}
